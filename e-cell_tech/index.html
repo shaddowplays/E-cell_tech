@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Cell BITS Hyderabad</title>
+<meta name="description" content="The entrepreneurship cell of BITS Pilani, Hyderabad Campus.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230c233c'/%3E%3Crect x='6' y='18' width='4' height='8' fill='%23e2a53d'/%3E%3Crect x='14' y='12' width='4' height='14' fill='%23e2a53d'/%3E%3Crect x='22' y='7' width='4' height='19' fill='%23f3c669'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --org-navy:#0c233c;
+  --org-navy-deep:#081422;
+  --org-navy-soft:#13293f;
+  --org-paper:#f7f4ec;
+  --org-paper-alt:#efe8d5;
+  --org-ink:#0f1d2b;
+  --org-ink-dim:#5c6773;
+  --org-cream:#f4eee1;
+  --org-cream-dim:#aebac6;
+  --org-gold:#e2a53d;
+  --org-gold-bright:#f3c669;
+  --line-dark: rgba(244,238,225,0.14);
+  --line-dark-strong: rgba(244,238,225,0.26);
+  --line-light: rgba(15,29,43,0.12);
+}
+body{margin:0;font-family:"Inter",system-ui,sans-serif;background:var(--org-paper);color:var(--org-ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;margin:0;color:inherit;}
+p{margin:0;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;margin:0;padding:0;}
+img,svg{display:block;max-width:100%;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--org-gold);outline-offset:3px;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px;}
+
+/* nav */
+.site-nav{position:sticky;top:0;z-index:50;background:rgba(12,35,60,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px;}
+.brand{display:flex;align-items:center;gap:12px;color:var(--org-cream);}
+.brand-mark{width:26px;height:26px;flex-shrink:0;}
+.brand-word{font-family:"Fraunces",serif;font-weight:600;font-size:16px;letter-spacing:0.01em;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{font-size:14.5px;color:var(--org-cream-dim);padding:8px 2px;border-bottom:1px solid transparent;transition:color .18s ease,border-color .18s ease;}
+.nav-links a:hover,.nav-links a.active{color:var(--org-cream);border-color:var(--org-gold);}
+.nav-cta{display:flex;align-items:center;gap:16px;}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-dark);width:42px;height:42px;align-items:center;justify-content:center;color:var(--org-cream);cursor:pointer;}
+.nav-toggle svg{width:18px;height:18px;}
+.mobile-panel{display:none;flex-direction:column;padding:6px 0 20px;border-top:1px solid var(--line-dark);}
+.mobile-panel a{padding:13px 0;border-bottom:1px solid var(--line-dark);color:var(--org-cream-dim);font-size:15px;}
+.mobile-panel a.active{color:var(--org-gold-bright);}
+.mobile-panel.open{display:flex;}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;font-family:"Inter",sans-serif;font-weight:600;font-size:14.5px;cursor:pointer;border:1px solid transparent;transition:transform .18s ease,background .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.btn-gold{background:linear-gradient(135deg,var(--org-gold-bright),var(--org-gold));color:#20140a;}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 22px -8px rgba(226,165,61,0.5);}
+.btn-outline-light{border-color:var(--line-dark-strong);color:var(--org-cream);}
+.btn-outline-light:hover{border-color:var(--org-gold);color:var(--org-gold-bright);}
+.btn-outline-dark{border-color:var(--line-light);color:var(--org-ink);}
+.btn-outline-dark:hover{border-color:var(--org-navy);}
+.btn-large{padding:16px 30px;font-size:15.5px;}
+
+/* footer */
+.site-footer{background:var(--org-navy-deep);color:var(--org-cream-dim);padding:56px 0 28px;}
+.footer-inner{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.footer-brand .brand-word{color:var(--org-cream);font-size:19px;}
+.footer-brand p{margin-top:10px;max-width:32ch;font-size:13.5px;color:var(--org-cream-dim);}
+.footer-links{display:flex;gap:44px;}
+.footer-col h4{font-size:12.5px;color:var(--org-cream-dim);font-weight:600;margin-bottom:12px;letter-spacing:0.02em;}
+.footer-col a{display:block;color:var(--org-cream-dim);font-size:14px;padding:5px 0;}
+.footer-col a:hover{color:var(--org-gold-bright);}
+.footer-bottom{margin-top:44px;padding-top:20px;border-top:1px solid var(--line-dark);font-size:12px;color:#728093;}
+
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--org-ink-dim);padding:22px 0 0;}
+.back-link:hover{color:var(--org-navy);}
+
+@media (max-width:900px){
+  .nav-links{display:none;}
+  .nav-cta .btn-gold{display:none;}
+  .nav-toggle{display:flex;}
+}
+@media (max-width:560px){
+  .wrap{padding:0 20px;}
+  .footer-inner{flex-direction:column;}
+}
+
+
+.hero-home{background:radial-gradient(760px 420px at 12% 0%, rgba(226,165,61,0.16), transparent 60%), var(--org-navy);padding:100px 0 88px;color:var(--org-cream);position:relative;overflow:hidden;}
+.hero-home::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(90deg, rgba(244,238,225,0.035) 0 1px, transparent 1px 90px),repeating-linear-gradient(0deg, rgba(244,238,225,0.035) 0 1px, transparent 1px 90px);mask-image:linear-gradient(to bottom, black, transparent 72%);}
+.hero-home-inner{position:relative;z-index:2;max-width:700px;}
+.hero-home h1{font-size:clamp(36px,5.6vw,60px);line-height:1.08;}
+.hero-home .lede{margin-top:22px;font-size:17px;color:var(--org-cream-dim);max-width:54ch;}
+.hero-actions{margin-top:34px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
+.stat-row{margin-top:58px;display:flex;gap:0;border-top:1px solid var(--line-dark);padding-top:26px;flex-wrap:wrap;position:relative;z-index:2;}
+.stat{padding-right:30px;margin-right:30px;border-right:1px solid var(--line-dark);}
+.stat:last-child{border-right:none;margin-right:0;}
+.stat .n{font-family:"Fraunces",serif;font-weight:600;font-size:26px;color:var(--org-gold-bright);}
+.stat .l{font-size:12.5px;color:var(--org-cream-dim);margin-top:4px;max-width:18ch;}
+
+.featured{padding:96px 0 30px;}
+.featured-tag{font-size:12.5px;color:var(--org-gold-bright);font-weight:600;}
+.featured-card{background:var(--org-navy);color:var(--org-cream);padding:44px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;border-left:4px solid var(--org-gold);}
+.featured-card h2{margin-top:12px;font-size:clamp(26px,3.5vw,36px);}
+.featured-card .fd{margin-top:12px;color:var(--org-cream-dim);max-width:58ch;font-size:15px;}
+.featured-meta{margin-top:22px;display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--org-cream-dim);}
+.featured-meta b{color:var(--org-cream);font-weight:600;}
+
+.runs{padding:96px 0 100px;}
+.section-head{max-width:560px;margin-bottom:46px;}
+.section-head h2{font-size:clamp(30px,4.4vw,42px);}
+.section-head p{margin-top:14px;color:var(--org-ink-dim);}
+.runs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-light);border:1px solid var(--line-light);}
+.run-item{background:var(--org-paper);padding:32px 28px;}
+.run-item .ic{width:24px;height:24px;color:var(--org-navy);margin-bottom:16px;}
+.run-item h3{font-family:"Inter",sans-serif;font-weight:700;font-size:16px;}
+.run-item p{margin-top:10px;color:var(--org-ink-dim);font-size:14.5px;}
+
+.cta-band{background:var(--org-navy);color:var(--org-cream);padding:80px 0;}
+.cta-band-inner{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;}
+.cta-band h2{font-size:clamp(26px,3.6vw,38px);max-width:16ch;}
+.cta-band p{margin-top:10px;color:var(--org-cream-dim);}
+
+@media (max-width:900px){
+  .runs-grid{grid-template-columns:1fr;}
+  .featured-card{grid-template-columns:1fr;align-items:start;}
+}
+@media (max-width:560px){
+  .stat-row{flex-direction:column;gap:14px;}
+  .stat{border-right:none;border-bottom:1px solid var(--line-dark);padding-bottom:14px;margin-right:0;padding-right:0;}
+}
+
+</style>
+</head>
+<body>
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="4" y="18" width="5" height="10" fill="#E2A53D"/>
+        <rect x="13.5" y="12" width="5" height="16" fill="#E2A53D"/>
+        <rect x="23" y="6" width="5" height="22" fill="#F3C669"/>
+      </svg>
+      <span class="brand-word">E-CELL BITS HYDERABAD</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="active">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="forge-2026.html" class="btn btn-gold">Forge 2026</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel wrap" id="mobilePanel">
+    <a href="index.html" class="active">Home</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About</a>
+    <a href="forge-2026.html">Forge 2026</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-home">
+    <div class="wrap hero-home-inner">
+      <h1>Where BITS Hyderabad turns lab notebooks into launch plans.</h1>
+      <p class="lede">E-Cell BITS Hyderabad is the entrepreneurship cell of BITS Pilani, Hyderabad Campus &mdash; running the pitch practice, mentor circles, and build weekends that take a project from hostel-room idea to a venture with actual users.</p>
+      <div class="hero-actions">
+        <a href="events.html" class="btn btn-gold btn-large">See what's on</a>
+        <a href="about.html" class="btn btn-outline-light btn-large">Meet the team</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">3</div><div class="l">Flagship events run each year</div></div>
+        <div class="stat"><div class="n">60+</div><div class="l">Student ventures mentored since 2015</div></div>
+        <div class="stat"><div class="n">&#8377;2,00,000</div><div class="l">On the table at Forge 2026 alone</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="wrap">
+      <div class="featured-card">
+        <div>
+          <div class="featured-tag">Flagship &mdash; registrations open</div>
+          <h2>Forge 2026</h2>
+          <p class="fd">A 48-hour venture-building weekend. Teams show up with a rough idea and leave with a working prototype, a pitch, and a jury's verdict.</p>
+          <div class="featured-meta">
+            <span><b>Feb 6&ndash;8, 2026</b></span>
+            <span>New Auditorium, BITS Hyderabad</span>
+          </div>
+        </div>
+        <a href="forge-2026.html" class="btn btn-gold btn-large">View event details</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="runs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we run</h2>
+        <p>Three kinds of sessions, spread across the year, aimed at different stages of having an idea.</p>
+      </div>
+      <div class="runs-grid">
+        <article class="run-item">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h12v9H8l-4 4z"/><path d="M20 8v9l-4-4h-2"/></svg>
+          <h3>Pitch circuits</h3>
+          <p>Monthly, low-stakes practice rounds where you pitch to a small panel and walk away with notes you can actually use.</p>
+        </article>
+        <article class="run-item">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M12.5 5.5l6 6"/></svg>
+          <h3>Build weekends</h3>
+          <p>Forge is the biggest of these &mdash; short, intense sprints that turn an idea into a working prototype in under 48 hours.</p>
+        </article>
+        <article class="run-item">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M9 10.2a3 3 0 015.8-1M9.2 14a3 3 0 005.8 1"/></svg>
+          <h3>Founder talks</h3>
+          <p>Alumni and campus founders come back to talk through what actually happened after they left &mdash; the parts that don't make the pitch deck.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-band-inner">
+      <div>
+        <h2>Got an idea sitting in a group chat?</h2>
+        <p>Forge is the fastest way to find out if it's worth building.</p>
+      </div>
+      <a href="forge-2026.html" class="btn btn-gold btn-large">Apply to Forge 2026</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-word">E-CELL BITS HYDERABAD</span>
+      <p>The entrepreneurship cell of BITS Pilani, Hyderabad Campus — run by students, for students building something real.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="forge-2026.html">Forge 2026</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span id="year"></span> E-Cell BITS Hyderabad. Built as a design sample — details on this site are indicative.
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = String(new Date().getFullYear()) + ' \u00A9';
+  var toggle = document.getElementById('navToggle');
+  var panel = document.getElementById('mobilePanel');
+  if(toggle){
+    toggle.addEventListener('click', function(){
+      var open = panel.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>
